@@ -14,8 +14,22 @@
 
 ```python
 import requests
+from datetime import datetime as dt
 
-response = requests.get(f"https://www.tutu.ru/spb/rasp.php?st1={start_station}&st2={target_station}&date={date}")
+
+start_station = 40105 # СПб, Финляндский вокзал
+target_station = 47605 # Сосново
+date = dt.strftime(dt.now(), "%d.%m.%Y")
+
+params = {
+    "st1": start_station,
+    "st2": target_station,
+    "date": date
+}
+
+url = "https://www.tutu.ru/spb/rasp.php"
+
+response = requests.get(url, params=params)
 ```
 
 Для этого в переменные `start_station` и `target_station` необходимо положить коды станций (например, для Финдлянского вокзала код равен
@@ -79,7 +93,8 @@ optional arguments:
   -h, --help  show this help message and exit
   -s START    Станция отправления
   -t TARGET   Станция прибытия
-  -d DATE     Дата, для которой показывается расписание (в формате ГГГГ-ММ-ДД). По умолчанию - текущая дата
+  -d DATE     Дата, для которой показывается расписание (в формате ГГГГ-ММ-ДД).
+              По умолчанию - текущая дата
 ```
 ---
 ```shell script
