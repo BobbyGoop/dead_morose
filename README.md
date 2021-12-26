@@ -72,8 +72,11 @@ response = requests.get(url, params=params)
 в списке указанную станцию, сделает запрос к API Яндекса и получит ответ в JSON-е, откуда можно взять уже нужную информацию
 и красиво вывести на экран.
 
-Обработка запроса происходит в функции `utils.api.get_schedule()`, 
-поиск кода нужной станции в функции `main.search_code()`, красивый вывод результатов - `main.pretty_print()`.
+`utils.api.get_schedule(code_start, code_target, date)` - Обработка запроса к API
+
+`main.search_code(station)` - поиск кода нужной станции в  [файле cо станциями](only_spb_trains.json).
+
+`main.pretty_print()` - красивый вывод результатов.
 
 
 ### Basic Usage
