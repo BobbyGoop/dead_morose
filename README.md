@@ -45,7 +45,7 @@ response = requests.get(url, params=params)
 #### *1) Получение общего списка станций*
    
 `extract_data.get_full_data()` - 
-посредством запроса к ресурсу API [https://api.rasp.yandex.net/v3.0/stations_list/](https://api.rasp.yandex.net/v3.0/stations_list/)
+посредством запроса к ресурсу API [*(https://api.rasp.yandex.net/v3.0/stations_list/)*](https://api.rasp.yandex.net/v3.0/stations_list/)
 получает огромный JSON с **1 800 000** строк и весом **100 Мб** (при сохранении в файл `all_regions.json`)
 со всеми возможными станциями, включая аеропорты, автобусные остановки и так далее
 вместе с кодами этих станций в системе кодирования Яндекса
@@ -76,7 +76,7 @@ response = requests.get(url, params=params)
 
 `main.search_code(station)` - поиск кода нужной станции в  [файле cо станциями](only_spb_trains.json).
 
-`main.pretty_print()` - красивый вывод результатов.
+`main.pretty_print(lines)` - красивый вывод результатов.
 
 
 ### Basic Usage
