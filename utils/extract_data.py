@@ -8,7 +8,6 @@ headers = {
 }
 
 params = {
-	"api+key"
 	"lang": "ru",
 	"format": "json"
 }

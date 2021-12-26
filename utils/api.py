@@ -40,7 +40,7 @@ def get_schedule(code_start, code_target, date):
 				"arrival": str(arr_time),
 				"route": travel["thread"]["title"],
 				"train": travel["thread"]["number"],
-				"currency": f' {travel["tickets_info"]["places"][0]["currency"]}',
+				"currency": f'{travel["tickets_info"]["places"][0]["currency"]}',
 				"price": f'{travel["tickets_info"]["places"][0]["price"]["whole"]}'
 
 			})
